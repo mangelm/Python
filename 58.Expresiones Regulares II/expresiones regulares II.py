@@ -31,17 +31,24 @@ for elemento in lista_nombres:
     if re.findall('^ftp',elemento):
         print('Termina por el elemento escogido:',elemento)
  """
-lista_nombres=['hombres',
+""" lista_nombres=['hombres',
                'mujeres',
                'mascotas',
-               'camión',
-               'camion'
-                ]
+               'niños',
+               'niñas'
+                ] """
 
 """ for elemento in lista_nombres:
     #en el caso de buscar los que incluyan
     if re.findall('niñ[oa]s',elemento):
         print(elemento) """
+
+lista_nombres=['hombres',
+               'mujeres',
+               'mascotas',
+               'camión',
+               'camion'
+                ] 
 
 for elemento in lista_nombres:
     #en el caso de buscar los que incluyan
