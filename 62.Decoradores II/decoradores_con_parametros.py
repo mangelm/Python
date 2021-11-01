@@ -9,13 +9,13 @@ def funcion_decorador(funcion):
 """
 def funcion_decoradora(funcion_parametro):
     
-    def funcion_interior():
+    def funcion_interior(*args, **kwargs): #args para un numero indeterminado de parametros , kwargs son argumentos con clave y valor
 
         #Acciones adicionales que decoran
 
         print("Vamos a realizar un cálculo: ")
 
-        funcion_parametro()
+        funcion_parametro(*args, **kwargs)
 
         #acciones adicionales que decoran
 
@@ -23,15 +23,24 @@ def funcion_decoradora(funcion_parametro):
 
     return funcion_interior
 
+@funcion_decoradora
+def suma(num1,num2,num3):
 
-#funciones que queremos "decorar"
-@funcion_decoradora #con esto le digo que decore esta funcion, encima de la funcion a decorar
-def suma():
-    print(15+20)
+    print(num1+num2+num3)
 
-def resta():
-    print(30-10)
+@funcion_decoradora
+def resta(num1,num2):
 
-suma()
+    print(num1-num2)
 
-resta()
+@funcion_decoradora
+def potencia(base,exponente):
+
+    print(pow(base,exponente))
+
+
+suma(7,5,8)
+
+resta(12,10)
+
+potencia(base=5,exponente=3)
