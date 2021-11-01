@@ -38,5 +38,5 @@ lista_nombres=['Ma1',
 
 for elemento in lista_nombres:
     #en el caso de buscar los que esten entre el rago separado con -
-    if re.findall('Ma[0-3A-B]',elemento):
+    if re.findall('V',elemento):
         print(elemento)
