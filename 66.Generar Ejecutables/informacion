@@ -1,0 +1,20 @@
+Uso de ejemplo el archiv practicaCalculadora.py
+
+1.Ir a la ruta del archivo python
+2.En cmd (adminitrador) escribir pyinstaller nombre_archivo.py
+3.En el directorio donde esta el archivo se crearan varias carpetas.
+4.Entrar en dist y buscar el .exe
+
+En el caso de que queramos que no nos habra la consola tambien al ejecutar
+el comando seria:
+pyinstaller --windowed nombre_archivo.py
+Lo malo es que de la forma anterior sigues necesitando todos los archivos para ejecutar el ejecutable
+
+Con el siguiente comando lo que hacemos es que lo comprima todo en un mismo archivo para que de igual en que Windows se ejecute el programa.
+pyinstaller --windowed --onefile nombre_archivo.py
+
+Si queremos acompañar la aplicacion con un icono, primero tenemos que tener la imagen en formato .ico
+Entonces en comando seria para que añada el ico:
+pyinstaller --windowed --onefile --icon=ruta nombre_archivo.py
+En el caso anterior lo tenemos en el mismo directorio
+pyinstaller --windowed --onefile --icon=./nombreicono.icon nombre_archivo.py
